@@ -1,6 +1,5 @@
 # 👨‍💻 Portfolio Personal - Mauro Kolman
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e80d46cc-d9a3-4813-8557-adff5109b789/deploy-status)](https://app.netlify.com/projects/mauk-portfolio/deploys)
 Bienvenido al repositorio de mi portafolio personal. Este proyecto está diseñado para mostrar mis habilidades, experiencia y los proyectos que he desarrollado como Desarrollador Web.
 
 ## 🚀 Demo en vivo
