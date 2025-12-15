@@ -59,10 +59,10 @@ Si deseas clonar y ejecutar este proyecto localmente, sigue estos pasos:
 
 Si tienes alguna pregunta o quieres contactar conmigo:
 
-* **LinkedIn:** [www.linkedin.com/in/mauro-kolman](https://www.linkedin.com/in/mauro-kolman/)
+* **LinkedIn:** [linkedin/mauro-kolman](https://www.linkedin.com/in/mauro-kolman/)
 * **Email:** [mauro.kolman1255@gmail.com](mailto:mauro.kolman1255@gmail.com)
 * **GitHub:** [RedBoth](https://github.com/RedBoth)
 
 ---
 
-Hecho con ❤️ por **Mauro Kolman**.
+Hecho por **Mauro Kolman**.
