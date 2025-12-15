@@ -15,10 +15,16 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: 'Svgl - A beautiful library with SVG logos',
-    description: "Created from scratch with Next.js and TailwindCSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance",
-    link: 'https://svgl.app/',
-    github: 'https://github.com/pheralb/svgl',
+    title: 'Viaja con Ro | Un blog de viajes, aventuras y experiencias',
+    description: "Creado con Next.js y TailwindCSS. Es un espacio donde compartir vivencias de la mejor manera. Optimizado para SEO y con un diseño atractivo y funcional.",
+    github: 'https://github.com/RedBoth',
+    image: '/projects/svgl.webp',
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
+  },
+  {
+    title: 'Viaja con Ro | Un blog de viajes, aventuras y experiencias',
+    description: "Creado con Next.js y TailwindCSS. Es un espacio donde compartir vivencias de la mejor manera. Optimizado para SEO y con un diseño atractivo y funcional.",
+    github: 'https://github.com/RedBoth',
     image: '/projects/svgl.webp',
     tags: [TAGS.NEXT, TAGS.TAILWIND]
   }
@@ -26,26 +32,24 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags}) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+  PROJECTS.map(({ image, title, description, github}) => (
+    <article class="shadow-lg bg-brand-muted/10 p-6 rounded-xl hover:scale-[1.02] hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold text-brand-yellow mb-2">
         {title}
       </h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row mb-2">
-        {tags.map(tag => (
-            <li>
-              <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`} >
-                <tag.icon class="size-4"/>
-                {tag.name}
-              </span>
-            </li>
-        ))}
-      </ul>
+      <p class="text-base mb-4 text-pretty">{description}</p>
       <img 
-      class="rounded shadow-2xl shadow-white/10"
+      class="rounded-lg mt-4"
       src={image} 
       alt={`Captura de pantalla del proyecto ${image}`} />
+      <div class="flex gap-4 mt-4">
+        <a href={github} target="_blank" class="px-4 py-2 bg-brand-yellow text-black rounded-lg font-medium hover:bg-yellow-400 transition">
+          Ver código
+        </a>
+        <a href="https://demo-url.com" target="_blank" class="px-4 py-2 bg-brand-yellow text-black rounded-lg font-medium hover:bg-yellow-400 transition">
+          Ver demo
+        </a>
+      </div>
     </article>
   ))
 }

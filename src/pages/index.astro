@@ -1,45 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
-import SectionContainer from '../components/SectionContainer.astro'
-import SocialPill from '../components/SocialPill.astro'
-import Projects from '../components/Projects.astro'
-import Aboutme from '../components/Aboutme.astro'
-import LinkedinIcon from '../components/icons/Linkedin.astro'
-import GithubIcon from '../components/icons/Github.astro'
+import SectionContainer from '../components/SectionContainer.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Projects from '../components/Projects.astro';
+import LinkedinIcon from '../components/icons/Linkedin.astro';
+import GithubIcon from '../components/icons/Github.astro';
 import MailIcon from '../components/icons/Mail.astro';
-import CodeIcon from '../components/icons/Code.astro'
+import CodeIcon from '../components/icons/Code.astro';
+import ContactForm from '../components/ContactForm';
 ---
 
 <Layout title="Portfolio de Mauro - Desarrollador frontend" description='Contrata a Mauro para que haga tu aplicación web o movil.'>
-	<main class="px-4">
-		<SectionContainer class="pt-44 pb-20">
+	<main class="px-4 relative overflow-hidden">
+		<!-- Hero  -->
+		<SectionContainer id="hero" class="pt-44 pb-20 text-center md:text-left">
 
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				Hey, soy Mauro
-					<a href="https://www.linkedin.com/in/mauro-kolman/" target="_blank" rel="noopener" class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge></a>
+			<!-- Título -->
+			<h1 class="text-brand-text text-3xl md:text-4xl lg:text-5xl font-bold flex flex-col md:flex-row gap-y-4 md:gap-x-4 pb-6 lg:pb-10">
+				<span>Mauro Kolman</span>
+				<Badge id="dynamic-badge">Frontend Developer</Badge>
 			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-				<span class="text-yellow-200/90">Desarrollador web frontend.</span> 
-				<span class="opacity-80">De La Pampa hacia el mundo</span>
+
+			<h2 class="text-xl lg:text-2xl max-w-[700px] mx-auto md:mx-0 opacity-90">
+				Amante de los tonos oscuros, el detalle y la tecnología.  
+				Busco unir <span class="text-brand-yellow">estética, precisión y creatividad</span> en cada proyecto.
 			</h2>
 
-			<nav class="flex gap-2 mt-8 flex-wrap">
-					<SocialPill href="https://www.linkedin.com/in/mauro-kolman/">
-						<LinkedinIcon class="size-4 md:size-6" />
-						Linkedin
-					</SocialPill>
-					<SocialPill href="https://github.com/RedBoth">
-						<GithubIcon class="size-4 md:size-6" />
-						Github
-					</SocialPill>
-					<SocialPill href="mailto:mauro.kolman1255@gmail.com">
-						<MailIcon class="size-4 md:size-6" />
-						mauro.kolman1255@gmail.com
-					</SocialPill>
+			<!-- Redes -->
+			<nav class="flex gap-2 mt-6 flex-wrap justify-center md:justify-start animate-fadeIn delay-200">
+				<SocialPill href="https://www.linkedin.com/in/mauro-kolman/">
+					<LinkedinIcon class="size-4 md:size-6" />
+					Linkedin
+				</SocialPill>
+				<SocialPill href="https://github.com/RedBoth">
+					<GithubIcon class="size-4 md:size-6" />
+					Github
+				</SocialPill>
+				<SocialPill href="mailto:mauro.kolman1255@gmail.com">
+					<MailIcon class="size-4 md:size-6" />
+					Correo
+				</SocialPill>
 			</nav>
+			<!-- Boton CTA -->
+			<a href="#proyectos" class="inline-block mt-6 px-6 py-3 bg-brand-yellow/90 text-black font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition">
+				Ver proyectos
+			</a>
 		</SectionContainer>
+<<<<<<< HEAD
 
 		<SectionContainer id="Sobre-Mi">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
@@ -53,8 +61,164 @@ import CodeIcon from '../components/icons/Code.astro'
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<CodeIcon class="size-7"/>
 				Proyectos
+=======
+		<!-- Sobre mi -->
+		<SectionContainer id="sobre-mi">
+			<!-- Título -->
+			<h2 class="relative text-2xl font-semibold text-brand-text mb-6 inline-block">
+				Sobre mí
+				<span class="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-yellow rounded"></span>
+>>>>>>> 88239626ee635bb5bfbe34ed59f24a4a48d5e65c
 			</h2>
-			<Projects/>
+
+			<!-- Intro -->
+			<p class="text-brand-text/90 text-lg max-w-[740px] mb-12 text-center md:text-left md:ml-4">
+				Soy estudiante de <span class="text-brand-yellow font-semibold">Ingeniería</span> 
+				y me formé como <span class="text-brand-yellow font-semibold">Desarrollador Fullstack con Python</span>.  
+				Me apasiona el <span class="text-brand-yellow font-semibold">frontend</span>, 
+				aunque también disfruto aprender de <span class="text-brand-yellow font-semibold">fundamentos backend</span>.  
+				Busco siempre unir <span class="italic">detalle, estética y creatividad</span> en cada proyecto.
+			</p>
+
+			<!-- Timeline -->
+			<div class="relative border-l border-brand-yellow/40 pl-6 space-y-10 md:ml-8">
+				<!-- Item 1 -->
+				<div class="group">
+					<div class="absolute -left-3.5 w-7 h-7 rounded-full bg-brand-yellow/90 flex items-center justify-center ring-4 ring-black/40">
+						🎓
+					</div>
+					<h3 class="text-lg font-semibold text-brand-text group-hover:text-brand-yellow transition">
+						Ingeniería en curso
+					</h3>
+					<p class="text-brand-text/70">Avanzando en la carrera de Ingeniería, con foco en fundamentos sólidos.</p>
+				</div>
+
+				<!-- Item 2 -->
+				<div class="group">
+					<div class="absolute -left-3.5 w-7 h-7 rounded-full bg-brand-yellow/90 flex items-center justify-center ring-4 ring-black/40">
+						💻
+					</div>
+					<h3 class="text-lg font-semibold text-brand-text group-hover:text-brand-yellow transition">
+						Certificado Fullstack con Python
+					</h3>
+					<p class="text-brand-text/70">Experiencia en desarrollo backend y bases de datos, aplicando buenas prácticas.</p>
+				</div>
+
+				<!-- Item 3 -->
+				<div class="group">
+					<div class="absolute -left-3.5 w-7 h-7 rounded-full bg-brand-yellow/90 flex items-center justify-center ring-4 ring-black/40">
+						🌑
+					</div>
+					<h3 class="text-lg font-semibold text-brand-text group-hover:text-brand-yellow transition">
+						Frontend creativo
+					</h3>
+					<p class="text-brand-text/70">Enamorado de los tonos oscuros, el detalle y la experiencia visual.</p>
+				</div>
+			</div>
+		</SectionContainer>
+		<!-- Skills -->
+		<SectionContainer id="skills">
+			<h2 class="relative text-2xl font-semibold text-brand-text mb-6 inline-block">
+				Skills
+				<span class="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-yellow rounded"></span>
+			</h2>
+			<p class="text-brand-text/90 text-lg max-w-[740px] mb-12 text-center md:text-left md:ml-4">
+				Estas son algunas de las tecnologías y habilidades que utilizo para crear proyectos
+    		funcionales, escalables y atractivos.
+			</p>
+			<!-- Contenido -->
+			<div class="grid md:grid-cols-2 gap-12 md:ml-4">
+				<!-- Tecnologías -->
+				<div>
+					<h3 class="text-lg font-semibold text-brand-yellow mb-4">Tecnologías</h3>
+					<div class="grid grid-cols-3 gap-6 text-center">
+						<div class="flex flex-col items-center">
+							<img src="/icons/react.svg" alt="React" class="w-10 h-10 mb-2">
+							<span class="text-sm text-brand-text/90">React</span>
+						</div>
+						<div class="flex flex-col items-center">
+							<img src="/icons/astro.svg" alt="Astro" class="w-10 h-10 mb-2">
+							<span class="text-sm text-brand-text/90">Astro</span>
+						</div>
+						<div class="flex flex-col items-center">
+							<img src="/icons/tailwind.svg" alt="Tailwind" class="w-10 h-10 mb-2">
+							<span class="text-sm text-brand-text/90">Tailwind</span>
+						</div>
+						<div class="flex flex-col items-center">
+							<img src="/icons/python.svg" alt="Python" class="w-10 h-10 mb-2">
+							<span class="text-sm text-brand-text/90">Python</span>
+						</div>
+						<div class="flex flex-col items-center">
+							<img src="/icons/git.svg" alt="Git" class="w-10 h-10 mb-2">
+							<span class="text-sm text-brand-text/90">Git</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Soft skills -->
+				<div>
+					<h3 class="text-lg font-semibold text-brand-yellow mb-4">Soft Skills</h3>
+					<ul class="space-y-3 text-brand-text/90">
+						<li class="flex items-center gap-2">
+							<svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+							Trabajo en equipo y comunicación
+						</li>
+						<li class="flex items-center gap-2">
+							<svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+							Atención al detalle
+						</li>
+						<li class="flex items-center gap-2">
+							<svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+							Inglés intermedio
+						</li>
+						<li class="flex items-center gap-2">
+							<svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+							Aprendizaje rápido y adaptabilidad
+						</li>
+					</ul>
+				</div>
+			</div>
+		</SectionContainer>
+		<!-- Proyectos -->
+		<SectionContainer id="proyectos">
+			<h2 class="relative text-2xl font-semibold text-brand-text mb-6 inline-block">
+				<span class="flex gap-x-3 items-center">
+					<CodeIcon class="size-7"/>
+					Proyectos
+				</span>
+				<span class="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-yellow rounded"></span>
+			</h2>
+			<section class="grid md:grid-cols-2 gap-8">
+				<Projects/>
+			</section>
+		</SectionContainer>
+		<!-- Contacto -->
+		<SectionContainer id="contacto">
+			<h2 class="relative text-2xl font-semibold text-brand-text mb-6 inline-block">
+				<span class="flex gap-x-3 items-center">
+					✉️ Contacto
+				</span>
+				<span class="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-yellow rounded"></span>
+			</h2>
+			<ContactForm client:load />
 		</SectionContainer>
 	</main>
+	<!-- Script para rotar el texto del Badge -->
+	<script>
+		const messages = [
+			"Disponible para trabajar",
+			"Frontend Developer",
+			"Apasionado por la tecnología",
+			"🚀 Buscando nuevos retos"
+		];
+		let i = 0;
+		const badge = document.getElementById("dynamic-badge");
+		setInterval(() => {
+			i = (i + 1) % messages.length;
+			if (badge) {
+				badge.textContent = messages[i];
+			}
+		}, 2000);
+	</script>
 </Layout>
+
