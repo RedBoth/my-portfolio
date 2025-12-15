@@ -1,39 +1,25 @@
 ---
-import NextIcon from '../components/icons/Nextjs.astro'
-import TailwindIcon from '../components/icons/Tailwind.astro'
-const TAGS = {
-  NEXT: {
-    name: 'Next.js',
-    class: 'bg-black text-white',
-    icon: NextIcon
-  },
-  TAILWIND: {
-    name: 'Tailwind CSS',
-    class: 'bg-[#003159] text-[#73bcf6]',
-    icon: TailwindIcon
-  }
-}
 const PROJECTS = [
   {
-    title: 'Viaja con Ro | Un blog de viajes, aventuras y experiencias',
-    description: "Creado con Next.js y TailwindCSS. Es un espacio donde compartir vivencias de la mejor manera. Optimizado para SEO y con un diseño atractivo y funcional.",
-    github: 'https://github.com/RedBoth',
-    image: '/projects/svgl.webp',
-    tags: [TAGS.NEXT, TAGS.TAILWIND]
+    title: 'LotePro | Plataforma de gestión de lotes agrícolas',
+    description: "Desarrolado con React, NodeJS y Firebase. Una aplicación web para la gestión eficiente de lotes agrícolas, permitiendo a los usuarios monitorear y administrar sus cultivos de manera efectiva.",
+    github: 'https://github.com/RedBoth/Campo-app',
+    image: '/projects/lotepro.webp',
+    demo: "https://lotepro.netlify.app"
   },
   {
-    title: 'Viaja con Ro | Un blog de viajes, aventuras y experiencias',
+    title: 'SVGL | Blog de experiencias de viaje',
     description: "Creado con Next.js y TailwindCSS. Es un espacio donde compartir vivencias de la mejor manera. Optimizado para SEO y con un diseño atractivo y funcional.",
     github: 'https://github.com/RedBoth',
     image: '/projects/svgl.webp',
-    tags: [TAGS.NEXT, TAGS.TAILWIND]
+    demo: "https://github.com/RedBoth"
   }
 ]
 ---
 
 {
-  PROJECTS.map(({ image, title, description, github}) => (
-    <article class="shadow-lg bg-brand-muted/10 p-6 rounded-xl hover:scale-[1.02] hover:shadow-xl transition">
+  PROJECTS.map(({ image, title, description, github, demo}) => (
+    <article class="shadow-lg bg-brand-muted/10 p-6 rounded-xl hover:scale-[1.02] transition">
       <h3 class="text-xl font-semibold text-brand-yellow mb-2">
         {title}
       </h3>
@@ -42,11 +28,11 @@ const PROJECTS = [
       class="rounded-lg mt-4"
       src={image} 
       alt={`Captura de pantalla del proyecto ${image}`} />
-      <div class="flex gap-4 mt-4">
+      <div class="flex gap-4 mt-4 justify-between">
         <a href={github} target="_blank" class="px-4 py-2 bg-brand-yellow text-black rounded-lg font-medium hover:bg-yellow-400 transition">
           Ver código
         </a>
-        <a href="https://demo-url.com" target="_blank" class="px-4 py-2 bg-brand-yellow text-black rounded-lg font-medium hover:bg-yellow-400 transition">
+        <a href={demo} target="_blank" class="px-4 py-2 bg-brand-yellow text-black rounded-lg font-medium hover:bg-yellow-400 transition">
           Ver demo
         </a>
       </div>
