@@ -1,54 +1,69 @@
-# Astro Starter Kit: Basics
+# 👨‍💻 Portfolio Personal - Mauro Kolman
 
-```sh
-npm create astro@latest -- --template basics
-```
+![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)
+Bienvenido al repositorio de mi portafolio personal. Este proyecto está diseñado para mostrar mis habilidades, experiencia y los proyectos que he desarrollado como Desarrollador Web.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Demo en vivo
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Puedes ver el sitio desplegado aquí:
+👉 **[https://mauk-portfolio.netlify.app/](https://mauk-portfolio.netlify.app/)**
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+---
 
-## 🚀 Project Structure
+## 📸 Captura de Pantalla
 
-Inside of your Astro project, you'll see the following folders and files:
+![Vista Previa](./public/vista-previa.png)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Tecnologías Utilizadas
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Este portafolio fue construido utilizando las siguientes herramientas y tecnologías:
 
-Any static assets, like images, can be placed in the `public/` directory.
+* **Core:** [ Astro ]
+* **Estilos:** [ Tailwind CSS ]
+* **Deploy:** Netlify
 
-## 🧞 Commands
+## ✨ Funcionalidades
 
-All commands are run from the root of the project, from a terminal:
+* **Diseño Responsivo:** Adaptable a dispositivos móviles y escritorio.
+* **Formulario de Contacto:** Funcional e integrado.
+* **Showcase de Proyectos:** Sección dinámica con mis trabajos recientes.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 🔧 Instalación y Configuración Local
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Si deseas clonar y ejecutar este proyecto localmente, sigue estos pasos:
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/RedBoth/my-portfolio.git](https://github.com/RedBoth/my-portfolio.git)
+    ```
+
+2.  **Instalar dependencias:**
+    ```bash
+    cd my-portfolio
+    npm install
+    ```
+
+3.  **Ejecutar el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+
+4.  Abrir en el navegador: `http://localhost:3000` (o el puerto que te indique la consola).
+
+---
+
+## 📬 Contacto
+
+Si tienes alguna pregunta o quieres contactar conmigo:
+
+* **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/mauro-kolman/)
+* **Email:** [Email](mailto:mauro.kolman1255@gmail.com)
+* **GitHub:** [RedBoth](https://github.com/RedBoth)
+
+---
+
+Hecho con ❤️ por **Mauro Kolman**.
