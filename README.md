@@ -1,38 +1,38 @@
 # 👨‍💻 Portfolio Personal - Mauro Kolman
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e80d46cc-d9a3-4813-8557-adff5109b789/deploy-status)](https://app.netlify.com/projects/mauk-portfolio/deploys)
 Bienvenido al repositorio de mi portafolio personal. Este proyecto está diseñado para mostrar mis habilidades, experiencia y los proyectos que he desarrollado como Desarrollador Web.
 
 ## 🚀 Demo en vivo
 
 Puedes ver el sitio desplegado aquí:
-👉 **[https://mauk-portfolio.netlify.app/](https://mauk-portfolio.netlify.app/)**
+ **[https://mauk-portfolio.netlify.app/](https://mauk-portfolio.netlify.app/)**
 
 ---
 
-## 📸 Captura de Pantalla
+## 📸 Vista previa
 
 ![Vista Previa](./public/vista-previa.png)
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías utilizadas
 
 Este portafolio fue construido utilizando las siguientes herramientas y tecnologías:
 
-* **Core:** [ Astro ]
-* **Estilos:** [ Tailwind CSS ]
+* **Core:** Astro
+* **Estilos:** Tailwind CSS
 * **Deploy:** Netlify
 
 ## ✨ Funcionalidades
 
-* **Diseño Responsivo:** Adaptable a dispositivos móviles y escritorio.
-* **Formulario de Contacto:** Funcional e integrado.
-* **Showcase de Proyectos:** Sección dinámica con mis trabajos recientes.
+* **Diseño responsivo:** Adaptable a dispositivos móviles y escritorio.
+* **Formulario de contacto:** Funcional e integrado.
+* **Showcase de proyectos:** Sección dinámica con mis trabajos recientes.
 
 ---
 
-## 🔧 Instalación y Configuración Local
+## 🔧 Instalación y configuración local
 
 Si deseas clonar y ejecutar este proyecto localmente, sigue estos pasos:
 
@@ -60,8 +60,8 @@ Si deseas clonar y ejecutar este proyecto localmente, sigue estos pasos:
 
 Si tienes alguna pregunta o quieres contactar conmigo:
 
-* **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/mauro-kolman/)
-* **Email:** [Email](mailto:mauro.kolman1255@gmail.com)
+* **LinkedIn:** [www.linkedin.com/in/mauro-kolman](https://www.linkedin.com/in/mauro-kolman/)
+* **Email:** [mauro.kolman1255@gmail.com](mailto:mauro.kolman1255@gmail.com)
 * **GitHub:** [RedBoth](https://github.com/RedBoth)
 
 ---
