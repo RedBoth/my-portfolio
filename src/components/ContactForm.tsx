@@ -11,7 +11,6 @@ export default function ContactForm() {
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  // 🔍 Validaciones
   const validate = (field: string, value: string) => {
     switch (field) {
       case "name":
@@ -27,7 +26,6 @@ export default function ContactForm() {
     return "";
   };
 
-  // 🔄 Manejo de cambios en inputs
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -37,18 +35,15 @@ export default function ContactForm() {
     }
   };
 
-  // ✅ Marcar campo como "tocado"
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setTouched({ ...touched, [name]: true });
     setErrors({ ...errors, [name]: validate(name, value) });
   };
 
-  // 📤 Enviar formulario
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Validar todo al enviar
     const newErrors: { [key: string]: string } = {};
     Object.keys(formData).forEach((field) => {
       const error = validate(field, (formData as any)[field]);
@@ -89,7 +84,6 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       className="flex flex-col gap-4 bg-black/30 p-6 rounded-lg shadow-lg w-full"
     >
-      {/* Nombre */}
       <div>
         <input
           type="text"
@@ -103,7 +97,6 @@ export default function ContactForm() {
         {touched.name && errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
       </div>
 
-      {/* Email */}
       <div>
         <input
           type="email"
@@ -117,7 +110,6 @@ export default function ContactForm() {
         {touched.email && errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
       </div>
 
-      {/* Mensaje */}
       <div>
         <textarea
           name="message"
@@ -131,7 +123,6 @@ export default function ContactForm() {
         {touched.message && errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
       </div>
 
-      {/* Botón */}
       <button
         type="submit"
         disabled={status === "loading"}
@@ -140,7 +131,6 @@ export default function ContactForm() {
         {status === "loading" ? "Enviando..." : "Enviar"}
       </button>
 
-      {/* Feedback */}
       {status === "success" && <p className="text-green-400">¡Mensaje enviado con éxito!</p>}
       {status === "error" && <p className="text-red-400">Ocurrió un error, intenta de nuevo.</p>}
     </form>
