@@ -37,7 +37,14 @@ const { Content } = await project.render();
         <a href={project.data.demo} target="_blank" class="px-4 py-2 bg-brand-yellow text-black rounded-lg font-medium hover:bg-brand-purple/30 hover:text-brand-yellow transition">Ver demo</a>
     </div>
 
-    <article class="prose prose-invert prose-lg max-w-none">
+    <article class="prose prose-invert prose-lg max-w-none 
+    prose-headings:text-brand-yellow 
+    prose-headings:font-bold
+    prose-p:text-gray-300 prose-p:leading-relaxed
+    prose-a:text-brand-yellow hover:prose-a:text-yellow-300 prose-a:no-underline
+    prose-strong:text-white prose-strong:font-bold
+    prose-blockquote:border-l-4 prose-blockquote:border-brand-yellow prose-blockquote:bg-white/5 prose-blockquote:p-4 prose-blockquote:rounded-r-lg
+    prose-li:text-gray-300">
         <Content />
     </article>
 
