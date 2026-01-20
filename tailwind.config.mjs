@@ -1,20 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	darkMode: 'class',
-	theme: {
-		extend: {
-			colors: {
-				brand: {
-					yellow: "#fef08a",   // Amarillo principal
-					purple: "#6b21a8",   // Morado medio
-					dark: "#0a0a1f",     // Fondo oscuro
-					darker: "#1a0b2e",   // Segundo tono para gradiente
-					text: "#ffffff",     // Texto principal
-					muted: "#cbd5e1",    // Texto secundario
-				},
-			},
-		},
-	},
-	plugins: [],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          yellow: "#FFD700",   // Amarillo más dorado/intenso (Gold)
+          purple: "#9333ea",   // Morado vibrante
+          dark: "#050505",     // Fondo casi negro (para que resalte el grid)
+          secondary: "#111111", // Fondo secundario (tarjetas)
+          text: "#f3f4f6",     // Texto principal
+          muted: "#9ca3af",    // Texto secundario
+        },
+      },
+      animation: {
+        'border-spin': 'border-spin 3s linear infinite',
+      },
+      keyframes: {
+        'border-spin': {
+          '100%': {
+            transform: 'rotate(-360deg)',
+          },
+        },
+      },
+    },
+  },
+  plugins: [],
 };

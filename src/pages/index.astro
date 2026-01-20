@@ -1,207 +1,215 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
 import SectionContainer from '../components/SectionContainer.astro';
-import SocialPill from '../components/SocialPill.astro';
 import Projects from '../components/Projects.astro';
 import LinkedinIcon from '../components/icons/Linkedin.astro';
 import GithubIcon from '../components/icons/Github.astro';
-import MailIcon from '../components/icons/Mail.astro';
-import CodeIcon from '../components/icons/Code.astro';
 import ContactForm from '../components/ContactForm';
 ---
 
-<Layout title="Portfolio de Mauro - Desarrollador frontend" description='Contrata a Mauro para que haga tu aplicación web o movil.'>
-	<main class="px-4 relative overflow-hidden">
-		<!-- Hero  -->
-		<SectionContainer id="hero" class="pt-44 pb-20 text-center md:text-left">
+<Layout title="Portfolio de Mauro | Frontend Developer" description="Desarrollador Frontend especializado en React y experiencias visuales.">
+  <main class="px-4">
+    
+    <SectionContainer class="relative min-h-[90vh] flex flex-col justify-center items-center text-center py-20 overflow-visible">
+      
+      <div class="absolute top-[20%] left-[10%] md:left-[20%] w-72 h-72 md:w-96 md:h-96 bg-brand-purple/30 rounded-full blur-[80px] -z-10 opacity-60"></div>
+      
+      <div class="absolute top-[30%] right-[10%] md:right-[20%] w-72 h-72 md:w-96 md:h-96 bg-brand-yellow/20 rounded-full blur-[80px] -z-10 opacity-60"></div>
+      
+      
+      <div class="mb-6 animate-fadeIn">
+        <span class="relative inline-block overflow-hidden rounded-full p-[1px]">
+          <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
+          <div class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-brand-dark px-3 py-1 text-xs font-medium text-brand-muted backdrop-blur-3xl">
+            🚀 Disponible para trabajar
+          </div>
+        </span>
+      </div>
 
-			<!-- Título -->
-			<h1 class="text-brand-text text-3xl md:text-4xl lg:text-5xl font-bold flex flex-col md:flex-row gap-y-4 md:gap-x-4 pb-6 lg:pb-10">
-				<span>Mauro Kolman</span>
-				<Badge id="dynamic-badge">Frontend Developer</Badge>
-			</h1>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 animate-slideUp relative z-10">
+        MAURO <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-text to-brand-muted">KOLMAN</span>
+      </h1>
 
-			<h2 class="text-xl lg:text-2xl max-w-[700px] mx-auto md:mx-0 opacity-90">
-				Amante de los tonos oscuros, el detalle y la tecnología.  
-				Busco unir <span class="text-brand-yellow">estética, precisión y creatividad</span> en cada proyecto.
-			</h2>
+      <p class="text-xl md:text-2xl text-brand-muted max-w-2xl mx-auto mb-10 leading-relaxed animate-slideUp delay-100 relative z-10">
+        Transformo ideas en <span class="text-brand-yellow font-bold">experiencias digitales</span>. 
+        Especializado en Frontend, obsesionado con el detalle y el rendimiento.
+      </p>
 
-			<!-- Redes -->
-			<nav class="flex gap-2 mt-6 flex-wrap justify-center md:justify-start animate-fadeIn delay-200">
-				<SocialPill href="https://www.linkedin.com/in/mauro-kolman/">
-					<LinkedinIcon class="size-4 md:size-6" />
-					Linkedin
-				</SocialPill>
-				<SocialPill href="https://github.com/RedBoth">
-					<GithubIcon class="size-4 md:size-6" />
-					Github
-				</SocialPill>
-				<SocialPill href="mailto:mauro.kolman1255@gmail.com">
-					<MailIcon class="size-4 md:size-6" />
-					Correo
-				</SocialPill>
-			</nav>
-			<!-- Boton CTA -->
-			<a href="#proyectos" class="inline-block mt-6 px-6 py-3 bg-brand-yellow/90 text-black font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition">
-				Ver proyectos
-			</a>
-		</SectionContainer>
-		<!-- Sobre mi -->
-		<SectionContainer id="sobre-mi">
-			<!-- Título -->
-			<h2 class="relative text-2xl font-semibold text-brand-text mb-6 inline-block">
-				Sobre mí
-				<span class="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-yellow rounded"></span>
-			</h2>
+      <div class="flex flex-wrap justify-center gap-4 animate-slideUp delay-200 relative z-10">
+        <a href="#proyectos" class="px-8 py-3 bg-brand-yellow text-brand-dark font-bold rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.3)]">
+          Ver mi trabajo
+        </a>
+        <a href="mailto:mauro.kolman1255@gmail.com" class="px-8 py-3 border border-brand-muted/30 text-brand-text rounded-full hover:bg-white/5 transition-colors">
+          Contáctame
+        </a>
+      </div>
 
-			<!-- Intro -->
-			<p class="text-brand-text/90 text-lg max-w-[740px] mb-12 text-center md:text-left md:ml-4">
-				Soy estudiante de <span class="text-brand-yellow font-semibold">Ingeniería</span> 
-				y me formé como <span class="text-brand-yellow font-semibold">Desarrollador Fullstack con Python</span>.  
-				Me apasiona el <span class="text-brand-yellow font-semibold">frontend</span>, 
-				aunque también disfruto aprender de <span class="text-brand-yellow font-semibold">fundamentos backend</span>.  
-				Busco siempre unir <span class="italic">detalle, estética y creatividad</span> en cada proyecto.
-			</p>
+      <div class="mt-12 flex gap-6 opacity-70 hover:opacity-100 transition-opacity relative z-10">
+        <a href="https://linkedin.com" target="_blank" class="hover:text-brand-yellow transition-colors"><LinkedinIcon class="size-6"/></a>
+        <a href="https://github.com" target="_blank" class="hover:text-brand-yellow transition-colors"><GithubIcon class="size-6"/></a>
+      </div>
+    </SectionContainer>
 
-			<!-- Timeline -->
-			<div class="relative border-l border-brand-yellow/40 pl-6 space-y-10 md:ml-8">
-				<!-- Item 1 -->
-				<div class="group">
-					<div class="absolute -left-3.5 w-7 h-7 rounded-full bg-brand-yellow/90 flex items-center justify-center ring-4 ring-black/40">
-						🎓
-					</div>
-					<h3 class="text-lg font-semibold text-brand-text group-hover:text-brand-yellow transition">
-						Ingeniería en curso
-					</h3>
-					<p class="text-brand-text/70">Avanzando en la carrera de Ingeniería, con foco en fundamentos sólidos.</p>
-				</div>
 
-				<!-- Item 2 -->
-				<div class="group">
-					<div class="absolute -left-3.5 w-7 h-7 rounded-full bg-brand-yellow/90 flex items-center justify-center ring-4 ring-black/40">
-						💻
-					</div>
-					<h3 class="text-lg font-semibold text-brand-text group-hover:text-brand-yellow transition">
-						Certificado Fullstack con Python
-					</h3>
-					<p class="text-brand-text/70">Experiencia en desarrollo backend y bases de datos, aplicando buenas prácticas.</p>
-				</div>
+    <SectionContainer id="sobre-mi" class="py-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <div class="relative group mx-auto md:mx-0 w-64 h-64 md:w-80 md:h-80">
+          
+          <div class="absolute -inset-4 bg-gradient-to-r from-brand-purple to-brand-yellow rounded-2xl blur-xl opacity-30 group-hover:opacity-70 transition duration-1000 group-hover:duration-200"></div>
+          
+          <div class="relative h-full w-full bg-gradient-to-r from-brand-purple to-brand-yellow rounded-2xl p-[2px] shadow-2xl">
+            
+            <div class="h-full w-full bg-brand-secondary rounded-[14px] overflow-hidden">
+              <img 
+                src="/imagenPerfil.jpg" 
+                alt="Mauro Kolman" 
+                class="w-full h-full object-cover transition-all duration-500"
+              />
+            </div>
+          </div>
+        </div>
 
-				<!-- Item 3 -->
-				<div class="group">
-					<div class="absolute -left-3.5 w-7 h-7 rounded-full bg-brand-yellow/90 flex items-center justify-center ring-4 ring-black/40">
-						🌑
-					</div>
-					<h3 class="text-lg font-semibold text-brand-text group-hover:text-brand-yellow transition">
-						Frontend creativo
-					</h3>
-					<p class="text-brand-text/70">Enamorado de los tonos oscuros, el detalle y la experiencia visual.</p>
-				</div>
-			</div>
-		</SectionContainer>
-		<!-- Skills -->
-		<SectionContainer id="skills">
-			<h2 class="relative text-2xl font-semibold text-brand-text mb-6 inline-block">
-				Skills
-				<span class="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-yellow rounded"></span>
-			</h2>
-			<p class="text-brand-text/90 text-lg max-w-[740px] mb-12 text-center md:text-left md:ml-4">
-				Estas son algunas de las tecnologías y habilidades que utilizo para crear proyectos funcionales, escalables y atractivos.
-			</p>
-			<!-- Contenido -->
-			<div class="grid md:grid-cols-2 gap-12 md:ml-4">
-				<!-- Tecnologías -->
-				<div>
-					<h3 class="text-lg font-semibold text-brand-yellow mb-4">Tecnologías</h3>
-					<div class="grid grid-cols-3 gap-6 text-center">
-						<div class="flex flex-col items-center">
-							<img src="/icons/react.svg" alt="React" class="w-10 h-10 mb-2">
-							<span class="text-sm text-brand-text/90">React</span>
-						</div>
-						<div class="flex flex-col items-center">
-							<img src="/icons/astro.svg" alt="Astro" class="w-10 h-10 mb-2">
-							<span class="text-sm text-brand-text/90">Astro</span>
-						</div>
-						<div class="flex flex-col items-center">
-							<img src="/icons/tailwind.svg" alt="Tailwind" class="w-10 h-10 mb-2">
-							<span class="text-sm text-brand-text/90">Tailwind</span>
-						</div>
-						<div class="flex flex-col items-center">
-							<img src="/icons/python.svg" alt="Python" class="w-10 h-10 mb-2">
-							<span class="text-sm text-brand-text/90">Python</span>
-						</div>
-						<div class="flex flex-col items-center">
-							<img src="/icons/git.svg" alt="Git" class="w-10 h-10 mb-2">
-							<span class="text-sm text-brand-text/90">Git</span>
-						</div>
-					</div>
-				</div>
+        <div>
+          <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-brand-yellow">/</span> Sobre mí
+          </h2>
+          <p class="text-lg text-brand-muted mb-6 leading-relaxed">
+            Más que escribir código, me dedico a <strong class="text-brand-text">resolver problemas</strong>. 
+            Vengo del mundo de la Ingeniería, lo que me da una base lógica sólida, pero mi corazón está en el diseño de interfaces.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brand-purple/50 transition-colors group/stat">
+              <div class="text-3xl font-bold text-brand-purple mb-1 group-hover/stat:scale-110 transition-transform origin-left">Eng.</div>
+              <div class="text-sm text-brand-muted">Student & Developer</div>
+            </div>
+            <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brand-yellow/50 transition-colors group/stat">
+              <div class="text-3xl font-bold text-brand-yellow mb-1 group-hover/stat:scale-110 transition-transform origin-left">+4</div>
+              <div class="text-sm text-brand-muted">Proyectos Top</div>
+            </div>
+          </div>
+        </div>
 
-				<!-- Soft skills -->
-				<div>
-					<h3 class="text-lg font-semibold text-brand-yellow mb-4">Soft Skills</h3>
-					<ul class="space-y-3 text-brand-text/90">
-						<li class="flex items-center gap-2">
-							<svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-							Trabajo en equipo y comunicación
-						</li>
-						<li class="flex items-center gap-2">
-							<svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-							Atención al detalle
-						</li>
-						<li class="flex items-center gap-2">
-							<svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-							Inglés intermedio
-						</li>
-						<li class="flex items-center gap-2">
-							<svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-							Aprendizaje rápido y adaptabilidad
-						</li>
-					</ul>
-				</div>
-			</div>
-		</SectionContainer>
-		<!-- Proyectos -->
-		<SectionContainer id="proyectos">
-			<h2 class="relative text-2xl font-semibold text-brand-text mb-6 inline-block">
-				<span class="flex gap-x-3 items-center">
-					<CodeIcon class="size-7"/>
-					Proyectos
-				</span>
-				<span class="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-yellow rounded"></span>
-			</h2>
-			<section class="grid md:grid-cols-2 gap-8">
-				<Projects/>
-			</section>
-		</SectionContainer>
-		<!-- Contacto -->
-		<SectionContainer id="contacto">
-			<h2 class="relative text-2xl font-semibold text-brand-text mb-6 inline-block">
-				<span class="flex gap-x-3 items-center">
-					✉️ Contacto
-				</span>
-				<span class="absolute left-0 -bottom-1 h-[3px] w-full bg-brand-yellow rounded"></span>
-			</h2>
-			<ContactForm client:load />
-		</SectionContainer>
-	</main>
-	<!-- Script para rotar el texto del Badge -->
-	<script>
-		const messages = [
-			"Disponible para trabajar",
-			"Frontend Developer",
-			"Apasionado por la tecnología",
-			"🚀 Buscando nuevos retos"
-		];
-		let i = 0;
-		const badge = document.getElementById("dynamic-badge");
-		setInterval(() => {
-			i = (i + 1) % messages.length;
-			if (badge) {
-				badge.textContent = messages[i];
-			}
-		}, 2000);
-	</script>
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="skills" class="py-20">
+      <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
+        <span class="text-brand-purple">/</span> Tech Stack
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(180px,auto)]">
+        
+        <div class="md:col-span-2 p-8 rounded-2xl bg-brand-secondary border border-white/5 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-brand-purple/20 blur-[60px] rounded-full group-hover:bg-brand-purple/30 transition duration-500"></div>
+          
+          <div class="relative z-10 flex flex-col h-full justify-between">
+            <div class="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 mb-8 group-hover:scale-110 transition-transform">
+               <svg class="size-7 text-brand-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" /></svg>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-brand-text mb-4">Frontend Powerhouse</h3>
+              <div class="flex flex-wrap gap-2">
+                {['React', 'Astro', 'Tailwind', 'TypeScript', 'Next.js'].map(tech => (
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-brand-muted hover:bg-white/10 hover:text-brand-yellow transition-colors cursor-default">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-secondary border border-white/5 flex flex-col justify-between group hover:border-brand-purple/50 transition-colors">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 bg-brand-purple/20 rounded-lg text-brand-purple">
+              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
+            </div>
+            <h3 class="font-bold text-lg text-brand-text">Backend</h3>
+          </div>
+          <p class="text-sm text-brand-muted mb-4">
+            Manejo de lógica de servidor y bases de datos.
+          </p>
+          <div class="flex gap-2 text-sm font-mono text-brand-yellow">
+            <span>Python</span> <span class="text-white/20">•</span> <span>SQL</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-yellow text-brand-dark flex flex-col justify-center items-center text-center relative overflow-hidden group cursor-default">
+           <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+           
+           <svg class="size-10 mb-3 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+           <h3 class="font-bold text-xl relative z-10">Fast Performance</h3>
+           <p class="text-sm opacity-80 relative z-10 font-medium">Optimización & SEO</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-secondary border border-white/5 group hover:border-brand-yellow/50 transition-colors">
+           <div class="flex items-center gap-3 mb-6">
+             <div class="p-2 bg-white/5 rounded-lg text-brand-muted group-hover:text-brand-yellow transition-colors">
+               <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+             </div>
+             <h3 class="font-bold text-lg text-brand-text">Tools</h3>
+           </div>
+           <ul class="space-y-3 text-sm text-brand-muted">
+             <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> Git & GitHub</li>
+             <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> VS Code</li>
+             <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> Figma</li>
+           </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-secondary border border-white/5 flex flex-col justify-center gap-4 group hover:border-brand-purple/50 transition-colors">
+           <h3 class="font-bold text-lg text-brand-text flex items-center gap-2">
+             <span class="text-brand-purple">✦</span> Detail Oriented
+           </h3>
+           
+           <div class="space-y-4">
+             <div>
+               <div class="flex justify-between text-xs text-brand-muted mb-1">
+                 <span>UI/UX Design</span>
+                 <span>85%</span>
+               </div>
+               <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                 <div class="h-full bg-gradient-to-r from-brand-purple to-brand-yellow w-[85%]"></div>
+               </div>
+             </div>
+             <div>
+               <div class="flex justify-between text-xs text-brand-muted mb-1">
+                 <span>Clean Code</span>
+                 <span>100%</span>
+               </div>
+               <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                 <div class="h-full bg-gradient-to-r from-brand-purple to-brand-yellow w-full"></div>
+               </div>
+             </div>
+           </div>
+        </div>
+
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos" class="py-20">
+       <h2 class="text-3xl font-bold mb-10"><span class="text-brand-yellow">/</span> Proyectos Destacados</h2>
+       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="contacto" class="py-20">
+        <ContactForm client:visible />
+    </SectionContainer>
+
+  </main>
+
+  <style>
+    /* Animaciones extra para el Hero */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slideUp {
+      animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+  </style>
 </Layout>
-
