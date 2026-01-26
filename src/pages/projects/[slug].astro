@@ -1,52 +1,104 @@
 ---
-import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import SectionContainer from '../../components/SectionContainer.astro';
 
 export async function getStaticPaths() {
-    const projects = await getCollection('projects');
-    return projects.map((project) => ({
-        params: { slug: project.slug },
-        props: { project },
-    }));
-}
-
-interface Props {
-    project: CollectionEntry<'projects'>;
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
 }
 
 const { project } = Astro.props;
-const { Content } = await project.render();
+const { Content } = await render(project);
+
+// Iconos (SVG inline para no depender de librería externa)
+const GithubIcon = `<svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`;
+const LinkIcon = `<svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m-6-6L10 14"/></svg>`;
+const ArrowLeft = `<svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>`;
 ---
 
-<Layout title={project.data.title} description={project.data.description}>
-    <main class="max-w-4xl mx-auto px-4 py-12">
+<Layout title={`${project.data.title} | Mauro Kolman`} description={project.data.description}>
+  <main class="pt-32 pb-20 px-4">
     
-    <a href="/" class="text-brand-yellow hover:underline mb-8 block">Volver al inicio</a>
+    <SectionContainer class="max-w-4xl">
+      
+      <a 
+        href="/#proyectos" 
+        class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-yellow transition-colors mb-8 group"
+      >
+        <span class="group-hover:-translate-x-1 transition-transform">
+            <Fragment set:html={ArrowLeft} />
+        </span>
+        Volver a proyectos
+      </a>
 
-    <h1 class="text-4xl font-bold text-white mb-4">{project.data.title}</h1>
-    
-    <img 
-        src={project.data.image} 
-        alt={project.data.title} 
-        class="w-full h-auto rounded-xl shadow-lg mb-8"
-    />
+      <div class="mb-10 animate-slideUp">
+        <h1 class="text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight">
+          {project.data.title}
+        </h1>
+        
+        <p class="text-xl text-brand-muted mb-8 leading-relaxed">
+          {project.data.description}
+        </p>
 
-    <div class="flex gap-4 mb-8">
-        <a href={project.data.github} target="_blank" class="px-4 py-2 bg-brand-yellow text-black rounded-lg font-medium hover:bg-brand-purple/30 hover:text-brand-yellow transition">Ver código</a>
-        <a href={project.data.demo} target="_blank" class="px-4 py-2 bg-brand-yellow text-black rounded-lg font-medium hover:bg-brand-purple/30 hover:text-brand-yellow transition">Ver demo</a>
-    </div>
+        <div class="flex flex-wrap items-center justify-between gap-6 border-y border-white/10 py-6">
+            
+            <div class="flex flex-wrap gap-2">
+                {project.data.tags.map((tag) => (
+                    <span class="px-3 py-1 text-sm font-medium rounded-full bg-brand-secondary border border-white/10 text-brand-yellow">
+                        {tag}
+                    </span>
+                ))}
+            </div>
 
-    <article class="prose prose-invert prose-lg max-w-none 
-    prose-headings:text-brand-yellow 
-    prose-headings:font-bold
-    prose-p:text-gray-300 prose-p:leading-relaxed
-    prose-a:text-brand-yellow hover:prose-a:text-yellow-300 prose-a:no-underline
-    prose-strong:text-white prose-strong:font-bold
-    prose-blockquote:border-l-4 prose-blockquote:border-brand-yellow prose-blockquote:bg-white/5 prose-blockquote:p-4 prose-blockquote:rounded-r-lg
-    prose-li:text-gray-300">
+            <div class="flex gap-4">
+                {project.data.github && (
+                    <a href={project.data.github} target="_blank" class="flex items-center gap-2 text-brand-text hover:text-brand-yellow transition-colors">
+                        <Fragment set:html={GithubIcon} />
+                        <span class="font-medium">Código</span>
+                    </a>
+                )}
+                {project.data.demo && (
+                    <a href={project.data.demo} target="_blank" class="flex items-center gap-2 px-5 py-2 bg-brand-yellow text-brand-dark rounded-full font-bold hover:scale-105 transition-transform shadow-[0_0_15px_rgba(255,215,0,0.3)]">
+                        <Fragment set:html={LinkIcon} />
+                        <span>Demo en vivo</span>
+                    </a>
+                )}
+            </div>
+        </div>
+      </div>
+
+      <div class="relative mb-16 group animate-slideUp delay-100">
+         <div class="absolute -inset-1 bg-gradient-to-r from-brand-purple via-brand-yellow to-brand-purple rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+         
+         <div class="relative rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-brand-secondary">
+            <div class="h-8 bg-black/40 border-b border-white/5 flex items-center px-4 gap-2">
+                <div class="size-2.5 rounded-full bg-red-500/20"></div>
+                <div class="size-2.5 rounded-full bg-yellow-500/20"></div>
+                <div class="size-2.5 rounded-full bg-green-500/20"></div>
+            </div>
+            <img 
+              src={project.data.image} 
+              alt={project.data.title} 
+              class="w-full h-auto object-cover"
+            />
+         </div>
+      </div>
+
+      <div class="prose prose-invert prose-lg max-w-none 
+          prose-headings:text-brand-text prose-headings:font-bold
+          prose-p:text-brand-muted prose-p:leading-relaxed
+          prose-strong:text-brand-yellow
+          prose-a:text-brand-yellow prose-a:no-underline hover:prose-a:underline
+          prose-code:text-brand-purple prose-code:bg-white/5 prose-code:px-1 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+          prose-blockquote:border-l-brand-yellow prose-blockquote:bg-white/5 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
+          animate-slideUp delay-200">
         <Content />
-    </article>
+      </div>
 
-    </main>
+    </SectionContainer>
+  </main>
 </Layout>
