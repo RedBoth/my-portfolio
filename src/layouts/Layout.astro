@@ -2,6 +2,7 @@
 import '@fontsource-variable/onest';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
 interface Props {
   title: string;
   description: string;
@@ -30,6 +31,7 @@ const { title, description } = Astro.props;
 
     <Header />
     <slot />
+    <ScrollToTop />
     <Footer />
   </body>
 </html>

@@ -98,7 +98,17 @@ const ArrowLeft = `<svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="c
           animate-slideUp delay-200">
         <Content />
       </div>
-
+      <div class="mt-20 border-t border-white/10 pt-10 flex justify-center">
+        <a 
+          href="/#proyectos" 
+          class="group px-6 py-3 rounded-full bg-brand-secondary/50 border border-white/10 hover:border-brand-yellow/50 hover:bg-brand-yellow/10 transition-all duration-300 flex items-center gap-3 text-brand-muted hover:text-brand-yellow"
+        >
+          <span class="group-hover:-translate-x-1 transition-transform duration-300">
+            <Fragment set:html={ArrowLeft} />
+          </span>
+          <span class="font-medium">Volver a Proyectos</span>
+        </a>
+      </div>
     </SectionContainer>
   </main>
 </Layout>
