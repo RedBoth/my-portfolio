@@ -97,7 +97,7 @@ export default function ContactForm() {
             <div className="text-center mb-10">
                 <span className="text-brand-yellow font-mono text-sm tracking-wider uppercase mb-2 block">Get in touch</span>
                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                    Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-yellow-200">epic</span> together.
+                    Creemos experiencias <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-yellow-200">memorables.</span>
                 </h2>
                 <p className="text-brand-muted text-lg max-w-xl mx-auto">
                     ¿Tienes un proyecto en mente o simplemente quieres saludar? Envíame un mensaje.
@@ -161,7 +161,7 @@ export default function ContactForm() {
                             Enviando...
                         </span>
                     ) : (
-                        "Send Message >"
+                        "Enviar Mensaje >"
                     )}
                 </button>
 
@@ -184,8 +184,8 @@ export default function ContactForm() {
                 </a>
                 <div className="hidden md:block w-1 h-1 bg-white/20 rounded-full"></div>
                 <div className="flex gap-4">
-                    <a href="https://linkedin.com" className="hover:text-brand-yellow transition-colors">LinkedIn</a>
-                    <a href="https://github.com" className="hover:text-brand-yellow transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/mauro-kolman/" target="_blank" className="hover:text-brand-yellow transition-colors">LinkedIn</a>
+                    <a href="https://github.com/RedBoth" target="_blank" className="hover:text-brand-yellow transition-colors">GitHub</a>
                 </div>
             </div>
 

@@ -10,7 +10,7 @@ import ContactForm from '../components/ContactForm';
 <Layout title="Portfolio de Mauro | Frontend Developer" description="Desarrollador Frontend especializado en React y experiencias visuales.">
   <main class="px-4">
     
-    <SectionContainer class="relative min-h-[90vh] flex flex-col justify-center items-center text-center py-20 overflow-visible">
+    <SectionContainer id="top" class="relative min-h-[90vh] flex flex-col justify-center items-center text-center py-20 overflow-visible">
       
       <div class="absolute top-[20%] left-[10%] md:left-[20%] w-72 h-72 md:w-96 md:h-96 bg-brand-purple/30 rounded-full blur-[80px] -z-10 opacity-60"></div>
       
@@ -45,8 +45,8 @@ import ContactForm from '../components/ContactForm';
       </div>
 
       <div class="mt-12 flex gap-6 opacity-70 hover:opacity-100 transition-opacity relative z-10">
-        <a href="https://linkedin.com" target="_blank" class="hover:text-brand-yellow transition-colors"><LinkedinIcon class="size-6"/></a>
-        <a href="https://github.com" target="_blank" class="hover:text-brand-yellow transition-colors"><GithubIcon class="size-6"/></a>
+        <a href="https://www.linkedin.com/in/mauro-kolman/" target="_blank" class="hover:text-brand-yellow transition-colors"><LinkedinIcon class="size-6"/></a>
+        <a href="https://github.com/RedBoth" target="_blank" class="hover:text-brand-yellow transition-colors"><GithubIcon class="size-6"/></a>
       </div>
     </SectionContainer>
 
@@ -82,7 +82,7 @@ import ContactForm from '../components/ContactForm';
           <div class="grid grid-cols-2 gap-4 mt-8">
             <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brand-purple/50 transition-colors group/stat">
               <div class="text-3xl font-bold text-brand-purple mb-1 group-hover/stat:scale-110 transition-transform origin-left">Eng.</div>
-              <div class="text-sm text-brand-muted">Student & Developer</div>
+              <div class="text-sm text-brand-muted">Estudiante y Desarrollador</div>
             </div>
             <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brand-yellow/50 transition-colors group/stat">
               <div class="text-3xl font-bold text-brand-yellow mb-1 group-hover/stat:scale-110 transition-transform origin-left">+4</div>
@@ -96,7 +96,7 @@ import ContactForm from '../components/ContactForm';
 
     <SectionContainer id="skills" class="py-20">
       <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
-        <span class="text-brand-purple">/</span> Tech Stack
+        <span class="text-brand-purple">/</span> Tecnologías
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(180px,auto)]">
@@ -106,11 +106,11 @@ import ContactForm from '../components/ContactForm';
           
           <div class="relative z-10 flex flex-col h-full justify-between">
             <div class="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 mb-8 group-hover:scale-110 transition-transform">
-               <svg class="size-7 text-brand-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" /></svg>
+              <svg class="size-7 text-brand-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" /></svg>
             </div>
 
             <div>
-              <h3 class="text-2xl font-bold text-brand-text mb-4">Frontend Powerhouse</h3>
+              <h3 class="text-2xl font-bold text-brand-text mb-4">Desarrollo Frontend</h3>
               <div class="flex flex-wrap gap-2">
                 {['React', 'Astro', 'Tailwind', 'TypeScript', 'Next.js'].map(tech => (
                   <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-brand-muted hover:bg-white/10 hover:text-brand-yellow transition-colors cursor-default">
@@ -133,65 +133,76 @@ import ContactForm from '../components/ContactForm';
             Manejo de lógica de servidor y bases de datos.
           </p>
           <div class="flex gap-2 text-sm font-mono text-brand-yellow">
-            <span>Python</span> <span class="text-white/20">•</span> <span>SQL</span>
+            <span>Python</span> <span class="text-white/20">•</span> <span>SQL</span><span class="text-white/20">•</span> <span>Node.js</span><span class="text-white/20">•</span> <span>Java</span>
           </div>
         </div>
 
         <div class="p-6 rounded-2xl bg-brand-yellow text-brand-dark flex flex-col justify-center items-center text-center relative overflow-hidden group cursor-default">
-           <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-           
-           <svg class="size-10 mb-3 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-           <h3 class="font-bold text-xl relative z-10">Fast Performance</h3>
-           <p class="text-sm opacity-80 relative z-10 font-medium">Optimización & SEO</p>
+          <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+          
+          <svg class="size-10 mb-3 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          <h3 class="font-bold text-xl relative z-10">Alto Rendimiento</h3>
+          <p class="text-sm opacity-80 relative z-10 font-medium">Optimización & SEO</p>
         </div>
 
         <div class="p-6 rounded-2xl bg-brand-secondary border border-white/5 group hover:border-brand-yellow/50 transition-colors">
-           <div class="flex items-center gap-3 mb-6">
-             <div class="p-2 bg-white/5 rounded-lg text-brand-muted group-hover:text-brand-yellow transition-colors">
-               <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-             </div>
-             <h3 class="font-bold text-lg text-brand-text">Tools</h3>
-           </div>
-           <ul class="space-y-3 text-sm text-brand-muted">
-             <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> Git & GitHub</li>
-             <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> VS Code</li>
-             <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> Figma</li>
-           </ul>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="p-2 bg-white/5 rounded-lg text-brand-muted group-hover:text-brand-yellow transition-colors">
+              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </div>
+            <h3 class="font-bold text-lg text-brand-text">Herramientas</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-brand-muted">
+            <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> Git & GitHub</li>
+            <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> VS Code</li>
+            <li class="flex items-center gap-2"><span class="size-1.5 bg-brand-yellow rounded-full"></span> Figma</li>
+          </ul>
         </div>
 
-        <div class="p-6 rounded-2xl bg-brand-secondary border border-white/5 flex flex-col justify-center gap-4 group hover:border-brand-purple/50 transition-colors">
-           <h3 class="font-bold text-lg text-brand-text flex items-center gap-2">
-             <span class="text-brand-purple">✦</span> Detail Oriented
-           </h3>
-           
-           <div class="space-y-4">
-             <div>
-               <div class="flex justify-between text-xs text-brand-muted mb-1">
-                 <span>UI/UX Design</span>
-                 <span>85%</span>
-               </div>
-               <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                 <div class="h-full bg-gradient-to-r from-brand-purple to-brand-yellow w-[85%]"></div>
-               </div>
-             </div>
-             <div>
-               <div class="flex justify-between text-xs text-brand-muted mb-1">
-                 <span>Clean Code</span>
-                 <span>100%</span>
-               </div>
-               <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                 <div class="h-full bg-gradient-to-r from-brand-purple to-brand-yellow w-full"></div>
-               </div>
-             </div>
-           </div>
+        <div class="p-6 rounded-2xl bg-brand-secondary border border-white/5 flex flex-col justify-center group hover:border-brand-purple/50 transition-colors">
+          <h3 class="font-bold text-lg text-brand-text flex items-center gap-2 mb-6">
+            <span class="text-brand-purple">✦</span> Habilidades Blandas
+          </h3>
+          
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="mt-1 min-w-5">
+                <svg class="size-5 text-brand-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+              </div>
+              <div>
+                <span class="block text-brand-text font-medium text-sm">Trabajo en Equipo</span>
+                <span class="block text-brand-muted text-xs mt-0.5">Colaboración y feedback constante.</span>
+              </div>
+            </li>
+            
+            <li class="flex items-start gap-3">
+              <div class="mt-1 min-w-5">
+                <svg class="size-5 text-brand-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+              </div>
+              <div>
+                <span class="block text-brand-text font-medium text-sm">Comunicación Efectiva</span>
+                <span class="block text-brand-muted text-xs mt-0.5">Claridad técnica y empatía.</span>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <div class="mt-1 min-w-5">
+                <svg class="size-5 text-brand-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+              </div>
+              <div>
+                <span class="block text-brand-text font-medium text-sm">Resolución de Problemas</span>
+                <span class="block text-brand-muted text-xs mt-0.5">Enfoque lógico y analítico.</span>
+              </div>
+            </li>
+          </ul>
         </div>
 
       </div>
     </SectionContainer>
 
     <SectionContainer id="proyectos" class="py-20">
-       <h2 class="text-3xl font-bold mb-10"><span class="text-brand-yellow">/</span> Proyectos Destacados</h2>
-       <Projects />
+      <h2 class="text-3xl font-bold mb-10"><span class="text-brand-yellow">/</span> Proyectos Destacados</h2>
+      <Projects />
     </SectionContainer>
 
     <SectionContainer id="contacto" class="py-20">
