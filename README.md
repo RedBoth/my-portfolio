@@ -11,7 +11,7 @@ Puedes ver el sitio desplegado aquí:
 
 ## 📸 Vista previa
 
-![Vista Previa](./public/vista-previa.png)
+![Vista Previa](./public/vista-previa.webp)
 
 ---
 
